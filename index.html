@@ -1,0 +1,130 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<link rel="stylesheet" href="./css/flipclock.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="./js/flipclock.js"></script>
+<title>Submitting a form to display</title>
+</head>
+<link rel="stylesheet" href="./css/flipclock.css">
+
+<style type="text/css">
+<!--
+#container{
+
+border:1px solid red;
+height:500px;
+margin:0px auto;
+padding:0px;
+position:relative;
+width:600px;
+text-align:center;
+}
+
+#userName{
+border:1px solid red;
+display:none;
+font-family:Arial, Helvetica, sans-serif;
+font-size:36px;
+height:300px;
+position:absolute;
+top:75px;
+width:100%;
+
+}
+
+.userID{
+position:absolute;
+top:225px; 
+left:180px;
+}
+-->
+</style>
+<script type="text/javascript">
+<!--
+	//var username = getElementById();
+	var date = new Date();
+	var dday = date.getDay();
+	var dhour = date.getHours();
+	var dmin = date.getMinutes();
+	var time = date.getTime();
+	console.log(date);
+	document.write("Current time is " + dhour + ":" + dmin + " oh yeah!");
+	//console.log(currentTime);
+	
+	function startCounter() {
+	//This is calling for the input box 
+	var userName = document.getElementById("username").value;
+	var display = document.getElementById("text");
+	display.value = userName;
+
+	
+	
+	//This is calling for the div
+	var element = document.getElementById("userName").style.display = "block";
+	
+	
+	}
+	
+
+	
+//-->
+</script>
+<body>
+<div id="container">
+
+<script type="text/javascript">
+		var clock;
+		
+		$(document).ready(function() {
+			var clock;
+			clock = $('.clock').FlipClock({
+		        clockFace: 'DailyCounter',
+		        autoStart: false,
+		        callbacks: {
+		        	stop: function() {
+		        		$('.message').html('The clock has stopped!')
+		        	}
+		        }
+		    });
+				    
+		    clock.setTime(220880);
+		    clock.setCountdown(true);
+		    clock.start();
+		});
+	</script>
+	<div id="userName">
+		This is SPARTA!!!!!
+		<p id="text"></p>
+		
+				
+<div class="clock"></div>
+
+<script type="text/javascript">
+	var clock = $('.counter').FlipClock(100, {
+		clockFace: 'Counter'
+	});
+
+	setTimeout(function() {
+		setInterval(function() {
+			clock.increment();
+		}, 1000);
+	});
+</script>
+
+		
+		<script src="./js/jquery-1.11.3.js"></script>
+		<script src="./js/flipclock.min.js"></script>
+	
+	</div>
+	
+	
+	<div class="userID">
+		<input type="text" height="10" width="150" class="username" maxlength="175" id="username">
+		<button type="button" onClick="startCounter()">Submit</button>
+	</div>
+	
+	
+</div>
+</body>
+</html>

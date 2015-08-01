@@ -1,0 +1,32 @@
+<style type="text/css">
+<!--
+#container{
+
+border:1px solid red;
+height:500px;
+margin:0px auto;
+padding:0px;
+position:relative;
+width:600px;
+text-align:center;
+}
+
+#userName{
+border:1px solid red;
+display:none;
+font-family:Arial, Helvetica, sans-serif;
+font-size:36px;
+height:300px;
+position:absolute;
+top:75px;
+width:100%;
+
+}
+
+.userID{
+position:absolute;
+top:225px; 
+left:180px;
+}
+-->
+</style>
