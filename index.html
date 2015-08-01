@@ -1,8 +1,13 @@
 <!DOCTYPE HTML>
 <html>
 <head>
+<link rel="stylesheet" href="./css/flipclock.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="./js/flipclock.js"></script>
 <title>Submitting a form to display</title>
 </head>
+<link rel="stylesheet" href="./css/flipclock.css">
+
 <style type="text/css">
 <!--
 #container{
@@ -67,10 +72,50 @@ left:180px;
 </script>
 <body>
 <div id="container">
+
+<script type="text/javascript">
+		var clock;
+		
+		$(document).ready(function() {
+			var clock;
+			clock = $('.clock').FlipClock({
+		        clockFace: 'DailyCounter',
+		        autoStart: false,
+		        callbacks: {
+		        	stop: function() {
+		        		$('.message').html('The clock has stopped!')
+		        	}
+		        }
+		    });
+				    
+		    clock.setTime(220880);
+		    clock.setCountdown(true);
+		    clock.start();
+		});
+	</script>
 	<div id="userName">
 		This is SPARTA!!!!!
 		<p id="text"></p>
 		
+				
+<div class="clock"></div>
+
+<script type="text/javascript">
+	var clock = $('.counter').FlipClock(100, {
+		clockFace: 'Counter'
+	});
+
+	setTimeout(function() {
+		setInterval(function() {
+			clock.increment();
+		}, 1000);
+	});
+</script>
+
+		
+		<script src="./js/jquery-1.11.3.js"></script>
+		<script src="./js/flipclock.min.js"></script>
+	
 	</div>
 	
 	
